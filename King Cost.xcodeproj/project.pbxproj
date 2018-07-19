@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7E23E3FB2100298800462E1E /* ResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E23E3FA2100298800462E1E /* ResultVC.swift */; };
 		7E23E403210029A500462E1E /* KingCostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E23E402210029A500462E1E /* KingCostTests.swift */; };
+		7E23E40B21002BD100462E1E /* TransparentTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E23E40A21002BD100462E1E /* TransparentTextField.swift */; };
 		7E33CCFB20FD57840026534F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E33CCFA20FD57840026534F /* AppDelegate.swift */; };
 		7E33CD0020FD57840026534F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E33CCFE20FD57840026534F /* Main.storyboard */; };
 		7E33CD0220FD57850026534F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E33CD0120FD57850026534F /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		7E23E400210029A500462E1E /* KingCostTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KingCostTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E23E402210029A500462E1E /* KingCostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingCostTests.swift; sourceTree = "<group>"; };
 		7E23E404210029A500462E1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E23E40A21002BD100462E1E /* TransparentTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentTextField.swift; sourceTree = "<group>"; };
 		7E33CCF720FD57840026534F /* King Cost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "King Cost.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E33CCFA20FD57840026534F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E33CCFF20FD57840026534F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 		7E23E3F92100286900462E1E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7E23E40A21002BD100462E1E /* TransparentTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E23E40B21002BD100462E1E /* TransparentTextField.swift in Sources */,
 				7E33CD0E20FD58010026534F /* HomeVC.swift in Sources */,
 				7E23E3FB2100298800462E1E /* ResultVC.swift in Sources */,
 				7E33CCFB20FD57840026534F /* AppDelegate.swift in Sources */,

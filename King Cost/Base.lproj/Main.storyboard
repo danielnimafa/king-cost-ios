@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,6 +14,10 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="King_Cost" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mWN-VM-Mkt"/>
+                        <viewControllerLayoutGuide type="bottom" id="3SU-pJ-qkY"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,29 +29,115 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_gradient" translatesAutoresizingMaskIntoConstraints="NO" id="oTy-ta-wS0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Kota Asal" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cnw-ZN-Iix" customClass="TransparentTextField" customModule="King_Cost" customModuleProvider="target">
+                                <rect key="frame" x="36" y="100" width="303" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="wUj-MG-vMy"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Kota Tujuan" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="veY-tK-8Ur" customClass="TransparentTextField" customModule="King_Cost" customModuleProvider="target">
+                                <rect key="frame" x="36" y="165" width="303" height="40"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdX-SS-cJD">
+                                <rect key="frame" x="36" y="265" width="303" height="40"/>
+                                <color key="backgroundColor" red="0.41277736815159527" green="0.72412831570558378" blue="0.3810037772956944" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Cek Tarif">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="PCe-G3-LKP" kind="show" id="W8R-3M-eNa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zOF-3E-zFX">
+                                <rect key="frame" x="36" y="330" width="303" height="40"/>
+                                <color key="backgroundColor" red="0.41277736819999999" green="0.72412831570000002" blue="0.38100377730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fAb-JS-9hO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="DdX-SS-cJD" firstAttribute="top" secondItem="veY-tK-8Ur" secondAttribute="bottom" constant="60" id="5uF-2E-TqS"/>
+                            <constraint firstItem="zOF-3E-zFX" firstAttribute="top" secondItem="DdX-SS-cJD" secondAttribute="bottom" constant="25" id="68O-y0-dTm"/>
+                            <constraint firstItem="cnw-ZN-Iix" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="8MG-Pw-4Ni"/>
+                            <constraint firstItem="zOF-3E-zFX" firstAttribute="trailing" secondItem="DdX-SS-cJD" secondAttribute="trailing" id="8SZ-Dm-sCG"/>
+                            <constraint firstItem="veY-tK-8Ur" firstAttribute="top" secondItem="cnw-ZN-Iix" secondAttribute="bottom" constant="25" id="G0J-14-BWv"/>
+                            <constraint firstItem="DdX-SS-cJD" firstAttribute="leading" secondItem="veY-tK-8Ur" secondAttribute="leading" id="QrL-jJ-vXI"/>
+                            <constraint firstItem="oTy-ta-wS0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Xoz-oj-AnK"/>
+                            <constraint firstItem="cnw-ZN-Iix" firstAttribute="top" secondItem="mWN-VM-Mkt" secondAttribute="bottom" constant="80" id="aQQ-UE-zh3"/>
+                            <constraint firstItem="zOF-3E-zFX" firstAttribute="leading" secondItem="DdX-SS-cJD" secondAttribute="leading" id="bLZ-Fc-NdV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cnw-ZN-Iix" secondAttribute="trailing" constant="20" id="exg-V0-7v1"/>
+                            <constraint firstItem="3SU-pJ-qkY" firstAttribute="top" secondItem="oTy-ta-wS0" secondAttribute="bottom" id="iVx-aR-Pxd"/>
+                            <constraint firstItem="oTy-ta-wS0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ixK-RP-lR6"/>
+                            <constraint firstItem="DdX-SS-cJD" firstAttribute="trailing" secondItem="veY-tK-8Ur" secondAttribute="trailing" id="r3f-xL-pYu"/>
+                            <constraint firstItem="veY-tK-8Ur" firstAttribute="height" secondItem="cnw-ZN-Iix" secondAttribute="height" id="t32-JG-Yye"/>
+                            <constraint firstItem="veY-tK-8Ur" firstAttribute="trailing" secondItem="cnw-ZN-Iix" secondAttribute="trailing" id="tBx-c0-skv"/>
+                            <constraint firstItem="DdX-SS-cJD" firstAttribute="height" secondItem="veY-tK-8Ur" secondAttribute="height" id="v6J-1D-yYY"/>
+                            <constraint firstAttribute="trailing" secondItem="oTy-ta-wS0" secondAttribute="trailing" id="yO9-Th-T2l"/>
+                            <constraint firstItem="veY-tK-8Ur" firstAttribute="leading" secondItem="cnw-ZN-Iix" secondAttribute="leading" id="zPV-tc-E3N"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--ResultVC-->
         <scene sceneID="Nfx-JP-B3c">
             <objects>
-                <viewController id="PCe-G3-LKP" sceneMemberID="viewController">
+                <viewController id="PCe-G3-LKP" customClass="ResultVC" customModule="King_Cost" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DNu-uV-gvQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="dRN-M9-sA9"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FlS-Im-Z2r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg_gradient" translatesAutoresizingMaskIntoConstraints="NO" id="CWu-Lw-Phv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="161-mh-HaO">
+                                <rect key="frame" x="26" y="30" width="63" height="36"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Kembali">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="trl-ez-SUh" kind="unwind" unwindAction="unwindFromResultVCWithUnwindSegue:" id="ClG-pL-YhI"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="jQ1-mp-gBr"/>
+                        <constraints>
+                            <constraint firstItem="161-mh-HaO" firstAttribute="top" secondItem="DNu-uV-gvQ" secondAttribute="bottom" constant="10" id="cWG-y2-QAT"/>
+                            <constraint firstItem="161-mh-HaO" firstAttribute="leading" secondItem="FlS-Im-Z2r" secondAttribute="leadingMargin" constant="10" id="pdY-Hh-ZA7"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UWE-qY-oZ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="trl-ez-SUh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1129" y="134"/>
+            <point key="canvasLocation" x="929" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg_gradient" width="414" height="736"/>
+    </resources>
 </document>
